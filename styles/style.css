@@ -10,6 +10,7 @@
 body {
     height: 100vh;
     background-color: #202020;
+    font-family: 'Raleway', sans-serif;
 }
 
 header {
@@ -23,7 +24,6 @@ header {
     border-bottom: solid;
     border-width: 3px;
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0.685), rgba(0, 0, 0, 0)) 30;
-
 }
 
 header > a {
@@ -56,23 +56,29 @@ header > nav > ul > li:hover {
     border-bottom-left-radius: 5px;
 }
 
+header > nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+
 #apresentacao {
     color: white;
-    font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 40px;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
+    height: 78vh
 }
 
 #apresentacao > div > h1 {
     font-size: 2.3em;
     color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 0px black;
 }
 
 #apresentacao > div #trabalho-area {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 #apresentacao > div > #nome {
@@ -89,6 +95,114 @@ header > nav > ul > li:hover {
     color: white;
     text-decoration: none;
     padding: 7px;
-    border: 1px solid #fd6363;
+    margin: 2px;
+    border: 2px solid #fd6363;
     border-radius: 5px;
+    transition: background .3s ease-in-out, color .3s ease-in-out;
+}
+
+#apresentacao > div > a:hover {
+    background-color: salmon;
+    color: black;
+    border: 2px solid black;
+}
+
+#apresentacao > div > a > i {
+    margin: 0px 5px;
+}
+
+#sobre {
+    display: grid;
+    grid-row: auto;
+    height: 100vh;
+    background-color: #202020;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%233c1a1a' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23571313' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23730d0d' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%238e0606' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: scroll;
+    background-size: cover;
+    border-bottom: 2px solid white;
+}
+
+#sobre > h1 {
+    text-shadow: 2px 2px 0px black;
+    text-align: center;
+    padding-top: 40px;
+    color: white;
+    font-size: 3em;
+}
+
+#sobre > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
+
+#sobre > div > p {
+    width: 50vw;
+    font-size: 2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+#sobre > div > img {
+    height: 30vw;
+    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.548));
+}
+
+#tecnologias {
+    height: 100vh;
+    background-color: #A00000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23860606' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%236d0d0d' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23531313' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%233a1a1a' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23202020' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: scroll;
+    background-size: cover;
+    border-bottom: 2px solid white;
+}
+
+#tecnologias > h1 {
+    padding-top: 40px;
+    text-shadow: 2px 2px 0px black;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+
+#tecnologias > div {
+    display: grid;
+    grid-template-columns: repeat(3, .5fr);
+    align-items: center;
+    place-items: center;
+    height: 100vh;
+}
+
+#tecnologias > div > i {
+    font-size: 8em;
+    color: white;
+}
+
+#html5:hover {
+    color: rgb(255, 24, 24);
+}
+
+#css3:hover {
+    color: rgb(19, 19, 255);
+}
+
+#js:hover {
+    color: yellow;
+}
+
+#php:hover {
+    color: rgb(56, 56, 255);
+}
+
+#database:hover {
+    color: lightblue;
+}
+
+#python:hover {
+    color: rgb(255, 255, 55);
 }
