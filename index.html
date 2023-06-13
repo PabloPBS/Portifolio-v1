@@ -12,13 +12,15 @@
         <a href="https://github.com/pabloPBS" rel="external" target="_blank"><i class="fa-sharp fa-solid fa-code"></i></a>
 
         <nav>
-            <ul>
-                <li><a href="#apresentacao">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tecnologias">Tecnologias</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+            <ul id="menu">
+                <li class="botao-menu"><a href="#apresentacao">Home</a></li>
+                <li class="botao-menu"><a href="#sobre">Sobre</a></li>
+                <li class="botao-menu"><a href="#tecnologias">Tecnologias</a></li>
+                <li class="botao-menu"><a href="#projetos">Projetos</a></li>
+                <li class="botao-menu"><a href="#contato">Contato</a></li>
+                <button class="btn" id="fechar-menu"><i class="fa-solid fa-xmark"></i></button>
             </ul>
+            <button class="btn" id="abrir-menu"><i class="fa-solid fa-bars"></i></button>
         </nav>
     </header>
     <main>
@@ -27,9 +29,11 @@
                 <h1>Olá! eu sou</h1>
                 <h1 id="nome">Pablo Barbosa Silva</h1>
                 <h1 id="trabalho-area">Desenvolvedor Front-end</h1>
-                <a href="https://github.com/PabloPBS" rel="external" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
-                <a href="https://linkedin.com/in/pablopbs" rel="external" target="_blank"><i class="fa-brands fa-linkedin"></i>LindekIn</a>
-                <a href="curriculo/Currículo.pdf" rel="external" target="_blank" download><i class="fa-sharp fa-regular fa-file-pdf"></i>Baixar CV</a>
+                <div id="apresentacao-links">
+                    <a href="https://github.com/PabloPBS" rel="external" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+                    <a href="https://linkedin.com/in/pablopbs" rel="external" target="_blank"><i class="fa-brands fa-linkedin"></i>LindekIn</a>
+                    <a href="curriculo/Currículo.pdf" rel="external" target="_blank" download><i class="fa-sharp fa-regular fa-file-pdf"></i>Baixar CV</a>
+                </div>
             </div>
 
             <img src="images/developer.png" alt="Desenvolvedor">
@@ -39,7 +43,7 @@
 
             <div>
                 <img src="images/pfp3.png" alt="Eu">
-                <p>Me chamo Pablo Barbosa Silva, ávido estudante de desenvolimento de sistemas, com foco em linguagens como HTML5, CSS3, JavaScript, PHP e SQL. Também possuo familiaridade com Python, Git e GitHub. Apaixonado por tais tecnologias, estudo frequentemente para melhorar minhas skills e aumentar meu leque de habilidades.</p>
+                <p>Me chamo Pablo Barbosa Silva, ávido estudante de desenvolimento de sistemas, com foco em linguagens como HTML5, CSS3, JavaScript, PHP e SQL. Também possuo familiaridade com Python, Git e GitHub. Apaixonado por tais tecnologias, estudo frequentemente para melhorar meus conhecimentos e aumentar meu leque de habilidades.</p>
             </div>
         </section>
         <section id="tecnologias">
@@ -60,35 +64,35 @@
                 <div class="item-projeto" id="miranha">
                     <img src="images/Miranha.png" alt="Projeto Miranha">
                     <div class="links">
-                        <a href="https://pablopbs.github.io/Miranha/">Acesse aqui</a>
-                        <a href="https://pablopbs.github.io/Miranha/">Repositório no GitHub</a>
+                        <a href="https://pablopbs.github.io/Miranha/" rel="external" target="_blank">Acesse aqui</a>
+                        <a href="https://github.com/PabloPBS/Miranha/" rel="external" target="_blank">Repositório no GitHub</a>
                     </div>
                 </div>
                 <div class="item-projeto" id="acai">
                     <img src="images/Acai.png" alt="Projeto Açaí">
                     <div class="links">
-                        <a href="https://pablopbs.github.io/projeto-acai/">Acesse aqui</a>
-                        <a href="https://pablopbs.github.io/projeto-acai/">Repositório no GitHub</a>
+                        <a href="https://pablopbs.github.io/projeto-acai/" rel="external" target="_blank">Acesse aqui</a>
+                        <a href="https://github.com/PabloPBS/projeto-acai/" rel="external" target="_blank">Repositório no GitHub</a>
                     </div>
                 </div>
                 <div class="item-projeto" id="calculadora">
                     <img src="images/Calculadora.png" alt="Calculadora JavaScript">
                     <div class="links">
-                        <a href="https://pablopbs.github.io/calculadoraJs/">Acesse aqui</a>
-                        <a href="https://pablopbs.github.io/calculadoraJs/">Repositório no GitHub</a>
+                        <a href="https://pablopbs.github.io/calculadoraJs/" rel="external" target="_blank">Acesse aqui</a>
+                        <a href="https://github.com/PabloPBS/calculadoraJs/" rel="external" target="_blank">Repositório no GitHub</a>
                     </div>
                 </div>
                 <div class="item-projeto" id="login">
                     <img src="images/login.jpeg" alt="Projeto Login">
                     <div class="links">
-                        <a href="https://pablopbs.github.io/projeto-login/">Acesse aqui</a>
-                        <a href="https://pablopbs.github.io/projeto-login/">Repositório no GitHub</a>
+                        <a href="https://pablopbs.github.io/projeto-login/" rel="external" target="_blank">Acesse aqui</a>
+                        <a href="https://github.com/PabloPBS/projeto-login/" rel="external" target="_blank">Repositório no GitHub</a>
                     </div>
                 </div>
             </section>
         </section>
     </main>
-    <footer>
+    <footer id="contato">
         <h1>Contatos</h1>
         <section>            
                 <div id="email">
@@ -113,6 +117,8 @@
                 </div>
         </section>
     </footer>
+
     <script src="https://kit.fontawesome.com/aaa49a1d23.js" crossorigin="anonymous"></script>
+    <script src="script/menu-fixo.js"></script>
 </body>
 </html>
