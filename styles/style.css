@@ -7,13 +7,23 @@
     padding: 0px;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
 body {
+    scroll-snap-type: y mandatory;
     height: 100vh;
     background-color: #202020;
     font-family: 'Raleway', sans-serif;
 }
 
 header {
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    scroll-snap-align: start;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -51,7 +61,6 @@ header > nav > ul > li {
 
 header > nav > ul > li:hover {
     border: 1px solid rgb(255, 94, 94);
-    color: rgb(255, 127, 127);
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
@@ -61,6 +70,10 @@ header > nav > ul > li > a {
     text-decoration: none;
 }
 
+header > nav > ul > li > a:hover {
+    color: rgb(255, 127, 127);
+}
+
 #apresentacao {
     color: white;
     display: flex;
@@ -68,7 +81,7 @@ header > nav > ul > li > a {
     align-items: center;
     padding: 40px;
     border-bottom: 2px solid white;
-    height: 78vh
+    height: 100vh;
 }
 
 #apresentacao > div > h1 {
@@ -112,6 +125,7 @@ header > nav > ul > li > a {
 }
 
 #sobre {
+    scroll-snap-align: start;
     display: grid;
     grid-row: auto;
     height: 100vh;
@@ -125,7 +139,7 @@ header > nav > ul > li > a {
 #sobre > h1 {
     text-shadow: 2px 2px 0px black;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 12vh;
     color: white;
     font-size: 3em;
 }
@@ -154,16 +168,18 @@ header > nav > ul > li > a {
 }
 
 #tecnologias {
+    scroll-snap-align: start;
     height: 100vh;
     background-color: #A00000;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23860606' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%236d0d0d' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23531313' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%233a1a1a' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23202020' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
     background-attachment: scroll;
     background-size: cover;
+    padding: 20px;
     border-bottom: 2px solid white;
 }
 
 #tecnologias > h1 {
-    padding-top: 40px;
+    padding-top: 12vh;
     text-shadow: 2px 2px 0px black;
     color: white;
     text-align: center;
@@ -175,16 +191,18 @@ header > nav > ul > li > a {
     grid-template-columns: repeat(3, .5fr);
     align-items: center;
     place-items: center;
-    height: 100vh;
+    height: 80%;
 }
 
 #tecnologias > div > i {
     font-size: 8em;
     color: white;
+    transition: color .4s ease-in-out;
+    text-shadow: 2px 2px 5px black;
 }
 
 #html5:hover {
-    color: rgb(255, 24, 24);
+    color: rgb(255, 38, 0);
 }
 
 #css3:hover {
@@ -196,7 +214,7 @@ header > nav > ul > li > a {
 }
 
 #php:hover {
-    color: rgb(56, 56, 255);
+    color: rgb(117, 117, 248);
 }
 
 #database:hover {
@@ -204,5 +222,18 @@ header > nav > ul > li > a {
 }
 
 #python:hover {
-    color: rgb(255, 255, 55);
+    color: rgb(226, 226, 38);
+}
+
+#projetos {
+    scroll-snap-align: start;
+    height: 100vh;
+    padding: 20px;
+}
+
+#projetos > h1 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 12vh;
 }
