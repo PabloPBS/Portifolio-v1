@@ -226,7 +226,7 @@ header > nav > ul > li > a:hover {
 }
 
 #projetos {
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     height: 100vh;
     padding: 20px;
 }
@@ -236,4 +236,70 @@ header > nav > ul > li > a:hover {
     text-align: center;
     font-size: 3em;
     padding-top: 12vh;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 0px black;
+}
+
+#projetos > section#sec-projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+#sec-projetos > div {
+    border: 1px solid #ffffff8a;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: min-content;
+    margin-bottom: 30px;
+}
+
+.links > a {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0px 10px;
+    border: 1px solid rgb(255, 92, 92);
+    padding: 7px;
+    margin: 10px;
+    width: 70%;
+    text-align: center;
+    transition: all .5s ease-in-out;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+
+.links a:hover {
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #000000;
+}
+
+#first {
+    scroll-snap-align: none;
+}
+
+#first > iframe {
+    height: 65vh;
+}
+
+.item-projeto {
+    scroll-snap-align: start;
+    scroll-margin-top: 80px;
+}
+
+.item-projeto > iframe {
+    width: 80vw;
+    height: 78vh;
 }
