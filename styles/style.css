@@ -17,6 +17,7 @@ body {
     height: 100vh;
     background-color: #202020;
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -300,11 +301,6 @@ header > nav > #menu > li > a:hover {
     background-color: #fd6363;
 }
 
-#calculadora {
-    scroll-snap-align: start;
-    scroll-margin-top: 80px;
-}
-
 .item-projeto > img {
     width: 100%;
     height: 75%;
@@ -321,7 +317,7 @@ header > nav > #menu > li > a:hover {
 }
 
 footer {
-    scroll-snap-align: start;
+    scroll-snap-align: end;
     padding: 20px;
     height: 60vh;
     color: white;
@@ -467,7 +463,7 @@ footer  span {
     }
 
     #sec-projetos > .item-projeto {
-        width: 95vw;
+        width: 90vw;
         height: max-content;
     }
 
@@ -480,4 +476,31 @@ footer  span {
         padding-bottom: 50px;
         font-size: .6em;
     }
+}
+
+/* Animações */
+
+[data-anima] {
+    transition: .5s;
+}
+
+[data-anima].js {
+    opacity: 0;
+}
+
+[data-anima = 'esquerda'] {
+    transform: translate3d(-50px, 0, 0); /*x y z*/
+}
+
+[data-anima = 'direita'] {
+    transform: translate3d(50px, 0, 0); /*x y z*/
+}
+
+[data-anima = 'botton'] {
+    transform: translate3d(0, 50px, 0); /*x y z*/
+}
+
+[data-anima].animacao {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
